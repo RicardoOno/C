@@ -1,0 +1,10 @@
+gcc -> rodar programas em c
+-o <filename>.exe -> colocar nome no exec
+[cmd] <filename> -> irá rodar sem precisar do system("pause");
+[Acentuação]:
+	- #include <locale.h>
+	- setlocale (LC_ALL, "");
+[Pular linha] - \n
+
+Exibiçaõ de variavel:
+	- %d => inteiro
