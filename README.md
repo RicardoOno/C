@@ -3,7 +3,7 @@ Learning C
 
 **Overview**
 
-## C-I
+## [C-I](https://github.com/RicardoOno/C/tree/master/C-I)
 
 - printf
 - scanf
@@ -17,7 +17,7 @@ Learning C
 - abs
 - (double)
 
-## C-II
+## [C-II](https://github.com/RicardoOno/C/tree/master/C-II)
 
 - arrays
 - functions
@@ -32,11 +32,13 @@ Learning C
 - fprintf
 - strlen
 - constant
-- ponterios (soma.c file)
+- pointers (soma.c file)
 
-## C-III
+## [C-III](https://github.com/RicardoOno/C/tree/master/C-III)
 
-- Matriz (ponteiro de ponteiro)
+Note: in progress
+
+- Matriz (pointer to pointer)
 - struct
 - Alias of an struct
 - malloc & sizeof
