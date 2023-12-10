@@ -1,3 +1,32 @@
+# ATV 6 
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+
+    char livros[10][100];
+    
+    int i = 0;
+    for(i = 0; i < 10; i++) {
+        printf("Digite o nome do %do livro: ", i+1);
+        fgets(livros[i], 100, stdin);
+        int size = strlen(livros[i]) - 1;
+        livros[i][size] = '\0';
+    }
+
+    printf("\n\n-------------------------");
+    for (i = 0; i < 10; i++) {
+        printf("\n%do Titulo: %s", i+1, livros[i]);
+    }
+    
+    printf("\n-------------------------");
+
+    return 0;
+}
+```
+
 # ATV 7
 ```
 #include <stdio.h>
