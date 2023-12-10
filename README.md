@@ -4,22 +4,29 @@
 #include <stdlib.h>
 #include <string.h>
 
-char *strdel(char* string, int p);
+char *myStrdel(char* string, int p);
 
 int main() {
 
-    char *output = strdel("FATEC", 0);
+    char *output = myStrdel("12", 2);
     printf("%s", output);
 
-    free(output);
-    output = NULL;
+    if(output != NULL) {
+        free(output);
+        output = NULL;
+    }
 
     return 0;
 }
 
-char *strdel(char* string, int p) {
-    
+char *myStrdel(char* string, int p) {
+
+    if(p >= strlen(string) || strlen(string) == 0) {
+        return NULL;
+    }
+
     int size = strlen(string) + 1;
+
     char *output = (char*)malloc( size * sizeof(char) );
     memset(output, 0x00, size * sizeof(char));
 
@@ -31,6 +38,7 @@ char *strdel(char* string, int p) {
         output[j] = string[i];
     }
 
+    j++;
     output[j] = '\0';
     
     return output;
@@ -89,7 +97,7 @@ int main() {
 
 char *myStrcat(char *stringInicial, char *stringFinal) {
 
-    int size = strlen(stringInicial) + strlen(stringFinal) + 100;
+    int size = strlen(stringInicial) + strlen(stringFinal) + 1;
 
     char *output = (char*)malloc(size * sizeof(char));
     memset(output, 0x00, size * sizeof(char));
@@ -98,6 +106,7 @@ char *myStrcat(char *stringInicial, char *stringFinal) {
 
     // sprintf para concaternar 2 string
     sprintf(output, "%s%s", stringInicial, stringFinal);
+    output[size] = '\0';
     // -------------------------------------------------
 
     // 2 loopings. Primeiro looping para passar a stringInicial para uma terceira variavel. Segundo looping para concatenar a stringFinal a terceira variavel
@@ -114,10 +123,11 @@ char *myStrcat(char *stringInicial, char *stringFinal) {
     //     count++;
     //     size++;
     // }
+    // printf("size: %d\n", size);
+    // output[size+1]='\0';
     //  ------------------------------------------------
-
+    
     return output;
-
 }
 ```
 
