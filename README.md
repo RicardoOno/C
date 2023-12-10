@@ -1,3 +1,43 @@
+# ATV 8
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char *strdel(char* string, int p);
+
+int main() {
+
+    char *output = strdel("FATEC", 0);
+    printf("%s", output);
+
+    free(output);
+    output = NULL;
+
+    return 0;
+}
+
+char *strdel(char* string, int p) {
+    
+    int size = strlen(string) + 1;
+    char *output = (char*)malloc( size * sizeof(char) );
+    memset(output, 0x00, size * sizeof(char));
+
+    int j, i;
+    for (i = 0, j = 0; i < strlen(string); i++, j++) {
+        if(i == p) {
+            i++;
+        }
+        output[j] = string[i];
+    }
+
+    output[j] = '\0';
+    
+    return output;
+
+}
+```
+
 # ATV 9
 ```
 #include <stdio.h>
@@ -18,14 +58,13 @@ int main(){
 
 int myStrlen(char *string) {
 
-    int size = 0, count = 0;
+    int count = 0;
     
     while(string[count] != '\0') {
-        size++;
         count++;
     }
 
-    return size;
+    return count;
 }
 ```
 
