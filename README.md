@@ -1,46 +1,31 @@
-# C
-Learning C
+ATV 10
 
-**Overview**
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-## [C-I](https://github.com/RicardoOno/C/tree/master/C-I)
+int myStrlen(char *string);
 
-- printf
-- scanf
-- rand
-- time
-- srand
-- looping (for & while)
-- continue
-- break
-- mask (%d, %c)
-- abs
-- (double)
+int main(){
 
-## [C-II](https://github.com/RicardoOno/C/tree/master/C-II)
+    char value[]="LP_EXERCICIO P2 - Atv 10";
+    int size = myStrlen(value);
 
-- arrays
-- functions
-- headers
-- int and void
-- FILE* f
-- fopen
-- exit
-- fscanf
-- fseek (SEEK_SET and SEEK_END)
-- fclose
-- fprintf
-- strlen
-- constant
-- pointers (soma.c file)
+    printf(" O tamanho da string '%s' eh  %d", value, size);
+    
+    return 0;
+}
 
-## [C-III](https://github.com/RicardoOno/C/tree/master/C-III)
+int myStrlen(char *string) {
 
-Note: in progress
+    int size = 0, count = 0;
+    
+    while(string[count] != '\0') {
+        size++;
+        count++;
+    }
 
-- Matriz (pointer to pointer)
-- struct
-- Alias of an struct
-- malloc & sizeof
-- free
-- Creating other .Cs and .Hs
+    return size;
+}
+```
