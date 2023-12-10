@@ -57,19 +57,25 @@ char *myStrcat(char *stringInicial, char *stringFinal) {
 
     int count = 0;
 
-    while(stringInicial[count] != '\0') {
-        output[count] = stringInicial[count];
-        count++;
-    }
+    // sprintf para concaternar 2 string
+    sprintf(output, "%s%s", stringInicial, stringFinal);
+    // -------------------------------------------------
 
-    size = count;
-    count = 0;
+    // 2 loopings. Primeiro looping para passar a stringInicial para uma terceira variavel. Segundo looping para concatenar a stringFinal a terceira variavel
+    // while(stringInicial[count] != '\0') {
+    //     output[count] = stringInicial[count];
+    //     count++;
+    // }
 
-    while(stringFinal[count] != '\0') {
-        output[size] = stringFinal[count];
-        count++;
-        size++;
-    }
+    // size = count;
+    // count = 0;
+
+    // while(stringFinal[count] != '\0') {
+    //     output[size] = stringFinal[count];
+    //     count++;
+    //     size++;
+    // }
+    //  ------------------------------------------------
 
     return output;
 
