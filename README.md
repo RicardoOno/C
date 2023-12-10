@@ -1,3 +1,53 @@
+# ATV 7
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+
+#define TRUE        1
+#define FALSE       0
+
+int strPos(char *string, char c);
+
+int main() {
+
+    char c = 'z';
+    char value[] = "Faculdade de Tecnologia de Sao Pauloz";
+
+    int pos = strPos(value, c);
+
+    if(pos == -1) {
+        printf("caracter '%c' nao encontrado na string: '%s'", c, value);
+    } else {
+        printf("caracter '%c' primeiro encontrado na posicao: %d", c, pos);
+    }
+
+    return 0;
+}
+
+int strPos(char *string, char c) {
+
+    if(strlen(string) <= 0 ) return -1;
+
+    int i;
+    int found = FALSE;
+    for( i = 0; i <= strlen(string); i++ ) {
+        if( string[i] == c ) {
+             found = TRUE;
+             break;
+        }
+    }
+
+    if(!found) {
+        return -1;
+    }
+
+    return i;
+
+}
+```
+
 # ATV 8
 ```
 #include <stdio.h>
